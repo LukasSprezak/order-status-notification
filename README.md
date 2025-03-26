@@ -35,4 +35,4 @@ $builder = NotificationBuilder::create()
 
 
 
-echo $builder ? "Powiadomienie wysłane\n" : "Błąd wysyłki\n";
+echo $builder ? "Notification sent\n" : "Shipping error\n";
