@@ -35,12 +35,7 @@ final class NotificationBuilder
         $client = new Client();
         $factory = new HttpFactory();
 
-        return new self(
-            $client,
-            $factory,
-            $factory,
-            $factory
-        );
+        return new self($client, $factory, $factory, $factory);
     }
 
     public function rest(string $url): self

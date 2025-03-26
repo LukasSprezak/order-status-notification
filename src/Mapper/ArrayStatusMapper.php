@@ -23,7 +23,7 @@ final readonly class ArrayStatusMapper implements StatusMapperInterface
         $carrierStat = $carrierStatus->getValue();
 
         if (!isset($this->statusMap[$current][$carrierName][$carrierStat])) {
-            throw new MappingNotFoundException("$current|$carrierName", $carrierStat);
+            throw new MappingNotFoundException(sprintf('%s|%s', $current, $carrierName), $carrierStat);
         }
 
         return new MappedStatus($this->statusMap[$current][$carrierName][$carrierStat]);

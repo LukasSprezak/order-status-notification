@@ -2,8 +2,6 @@ vendor/bin/phpunit tests
 
 ## Usage
 
-Here's how you can create an order and send a notification using `NotificationBuilder`:
-
 ```php
 use OrderStatusNotification\NotificationBuilder;
 use OrderStatusNotification\Order;

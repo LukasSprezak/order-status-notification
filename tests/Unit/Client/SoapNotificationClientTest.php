@@ -122,8 +122,8 @@ final class SoapNotificationClientTest extends TestCase
         return new SoapNotificationClient(
             self::ENDPOINT,
             'sendNotification',
-            new HttpFactory(), // ResponseFactoryInterface
-            new HttpFactory(), // StreamFactoryInterface
+            new HttpFactory(),
+            new HttpFactory(),
             $soapMock
         );
     }

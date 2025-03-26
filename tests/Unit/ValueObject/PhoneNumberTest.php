@@ -68,6 +68,8 @@ final class PhoneNumberTest extends TestCase
             'too long' => ['+4850011122233'],
             'wrong prefix' => ['+47500111222'],
             'starts with 0' => ['+48050111222'],
+            'plus at first' => ['+500111222'],
+            'incomplete prefix' => ['48500111222'],
         ];
     }
 }

@@ -24,6 +24,7 @@ final class RestNotificationClientTest extends TestCase
     #[Test]
     public function shouldSendNotificationSuccessfully(): void
     {
+        // Given
         $order = $this->givenOrder();
         $status = new MappedStatus('DELIVERED');
         $response = $this->givenResponse(200);
@@ -42,14 +43,17 @@ final class RestNotificationClientTest extends TestCase
             new HttpFactory()
         );
 
+        // When
         $result = $client->sendNotification($order, $status);
 
+        // Then
         $this->assertSame($result->getStatusCode(), 200);
     }
 
     #[Test]
     public function shouldReturn503ResponseOnException(): void
     {
+        // Given
         $order = $this->givenOrder();
         $status = new MappedStatus('ERROR');
 
@@ -64,8 +68,10 @@ final class RestNotificationClientTest extends TestCase
             new HttpFactory()
         );
 
+        // When
         $response = $client->sendNotification($order, $status);
 
+        // Then
         $this->assertSame(503, $response->getStatusCode());
     }
 
