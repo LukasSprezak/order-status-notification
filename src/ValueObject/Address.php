@@ -12,7 +12,8 @@ final readonly class Address implements \JsonSerializable
         public string $postalCode,
         public string $city,
         public string $country = 'PL'
-    ) {}
+    ) {
+    }
 
     public function jsonSerialize(): array
     {

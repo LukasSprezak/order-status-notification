@@ -14,7 +14,8 @@ final readonly class Notifier
     public function __construct(
         private NotificationClientInterface $client,
         private StatusMapperInterface $mapper
-    ) {}
+    ) {
+    }
 
     public function notify(Order $order): bool
     {

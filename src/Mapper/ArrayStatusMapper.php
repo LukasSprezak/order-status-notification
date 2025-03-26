@@ -13,7 +13,8 @@ final readonly class ArrayStatusMapper implements StatusMapperInterface
 {
     public function __construct(
         private array $statusMap
-    ) {}
+    ) {
+    }
 
     public function map(OrderStatus $currentStatus, OrderStatus $carrierStatus, Carrier $carrier): MappedStatus
     {

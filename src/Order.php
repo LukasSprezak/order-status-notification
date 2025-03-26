@@ -42,7 +42,7 @@ final class Order
 
     public function withPhoneNumbers(array $numbers): self
     {
-        $this->phoneNumbers = array_unique(array_map(static fn($number) => PhoneNumber::fromString($number), $numbers), SORT_REGULAR);
+        $this->phoneNumbers = array_unique(array_map(static fn ($number) => PhoneNumber::fromString($number), $numbers), SORT_REGULAR);
         return $this;
     }
 
@@ -101,7 +101,7 @@ final class Order
 
     public function getPhoneNumbers(): array
     {
-        return array_map(static fn(PhoneNumber $phone) => $phone->getValue(), $this->phoneNumbers);
+        return array_map(static fn (PhoneNumber $phone) => $phone->getValue(), $this->phoneNumbers);
     }
 
     public function getSender(): ?Address

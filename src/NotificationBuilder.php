@@ -27,7 +27,8 @@ final class NotificationBuilder
         private readonly RequestFactoryInterface $requestFactory,
         private readonly StreamFactoryInterface $streamFactory,
         private readonly ResponseFactoryInterface $responseFactory
-    ) {}
+    ) {
+    }
 
     public static function create(): self
     {
